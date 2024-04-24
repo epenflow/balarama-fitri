@@ -25,11 +25,9 @@ const Loader = () => {
 				<span>fitri</span>
 			</div>
 			<span className='capitalize text-center text-2xl'>kepada yth.</span>
-			<React.Suspense fallback={<span>loading...</span>}>
-				<span className='text-center underline font-medium capitalize text-lg'>
-					{search}
-				</span>
-			</React.Suspense>
+			<span className='text-center underline font-medium capitalize text-lg'>
+				{search}
+			</span>
 			<button
 				className='bg-[#2C3C6D] py-2 px-5 my-5 text-[#D1CFCA] rounded-full'
 				onClick={handleClick}>
