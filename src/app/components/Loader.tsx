@@ -2,9 +2,7 @@
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
 
-const Loader = () => {
-	const searchParams = useSearchParams();
-	const search = searchParams.get('kepada');
+const Loader = ({ params }: { params: string }) => {
 	const [isActived, setActived] = React.useState<boolean>(false);
 	function handleClick() {
 		setActived((prev) => !prev);
@@ -26,7 +24,7 @@ const Loader = () => {
 			</div>
 			<span className='capitalize text-center text-2xl'>kepada yth.</span>
 			<span className='text-center underline font-medium capitalize text-lg'>
-				{search}
+				{decodeURI(params)}
 			</span>
 			<button
 				className='bg-[#2C3C6D] py-2 px-5 my-5 text-[#D1CFCA] rounded-full'

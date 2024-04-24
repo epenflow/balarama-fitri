@@ -22,7 +22,7 @@ const Profil = () => {
 					</span>
 				</div>
 				<div className='flex flex-col'>
-					<span className='text-5xl'>Fitri Wulandari A.Md.Par</span>
+					<span className='text-5xl'>Fitri Wulandari</span>
 					<span className='text-lg'>
 						Putri pertama dari pasangan Bapak nuril ahmad & ibu Alm.
 						Ni kadek sukariani
