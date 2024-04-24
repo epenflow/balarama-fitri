@@ -7,9 +7,7 @@ export default function Home() {
 		<main className='overflow-hidden'>
 			<Hero />
 			<Profil />
-			<React.Suspense fallback={<span>loading...</span>}>
-				<Loader />
-			</React.Suspense>
+			<Loader />
 		</main>
 	);
 }
