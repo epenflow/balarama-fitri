@@ -4,7 +4,15 @@ import Countdown from './Countdown';
 
 const Hero = () => {
 	return (
-		<section className='h-screen w-screen flex items-center flex-col gap-2 pt-20'>
+		<section className='h-screen w-screen flex items-center flex-col gap-2 text-[#D1CFCA] relative p-2'>
+			<div
+				style={{
+					backgroundImage: `url('/BG.jpg')`,
+					backgroundSize: 'cover',
+					backgroundRepeat: 'no-repeat',
+					backgroundPosition: 'center',
+				}}
+				className='absolute w-screen h-screen -z-10 top-0'></div>
 			<h1 className='text-4xl uppercase font-serif'>pawiwahan</h1>
 			<div className='text-5xl font-hendangan capitalize flex-col flex items-center gap-5 m-auto'>
 				<span>balarama</span>

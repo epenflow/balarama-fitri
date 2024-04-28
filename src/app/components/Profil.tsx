@@ -4,7 +4,7 @@ import React from 'react';
 import { FaMapLocationDot } from 'react-icons/fa6';
 const Profil = () => {
 	return (
-		<section className='h-screen w-screen flex flex-col items-center mb-10'>
+		<section className='h-screen w-screen flex flex-col items-center mb-10 p-2'>
 			<span className='text-center text-2xl lg:text-6xl m-2 font-sans'>
 				Om Swastiastu
 			</span>
@@ -15,14 +15,16 @@ const Profil = () => {
 			</span>
 			<div className='flex flex-col lg:flex-row text-center gap-5 m-auto'>
 				<div className='flex flex-col'>
-					<span className='text-5xl'>Made wahyu balarama</span>
+					<span className='text-5xl capitalize'>
+						Made wahyu balarama
+					</span>
 					<span className='text-lg'>
 						Putra kedua dari pasangan bapak I made wendra & ibu Ni
 						nyoman mariani
 					</span>
 				</div>
 				<div className='flex flex-col'>
-					<span className='text-5xl'>Fitri Wulandari</span>
+					<span className='text-5xl capitalize'>Fitri Wulandari</span>
 					<span className='text-lg'>
 						Putri pertama dari pasangan Bapak nuril ahmad & ibu Alm.
 						Ni kadek sukariani

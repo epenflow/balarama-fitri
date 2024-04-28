@@ -1,7 +1,6 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
-
 const Loader = ({ params }: { params: string }) => {
 	const [isActived, setActived] = React.useState<boolean>(false);
 	function handleClick() {
@@ -17,13 +16,23 @@ const Loader = ({ params }: { params: string }) => {
 	}, [isActived]);
 	return !isActived ? (
 		<div className='w-screen h-screen bg-[#D1CFCA] z-50 fixed top-0 flex flex-col pb-10 items-center'>
+			<div
+				style={{
+					backgroundImage: `url('/BG.jpg')`,
+					backgroundSize: 'cover',
+					backgroundRepeat: 'no-repeat',
+					backgroundPosition: 'center',
+				}}
+				className='absolute w-screen h-screen -z-10'></div>
 			<div className='text-5xl font-hendangan capitalize flex-col flex items-center gap-5 m-auto text-[#2C3C6D]'>
 				<span>balarama</span>
 				<span className='italic'>&</span>
 				<span>fitri</span>
 			</div>
-			<span className='capitalize text-center text-2xl'>kepada yth.</span>
-			<span className='text-center underline font-medium capitalize text-lg'>
+			<span className='capitalize text-center text-2xl text-[#D1CFCA]'>
+				kepada yth.
+			</span>
+			<span className='text-center underline font-medium capitalize text-lg text-[#D1CFCA]'>
 				{decodeURI(params)}
 			</span>
 			<button
