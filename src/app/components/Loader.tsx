@@ -1,20 +1,21 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
+import { useContextProvider } from './utils/Context';
 const Loader = ({ params }: { params: string }) => {
-	const [isActived, setActived] = React.useState<boolean>(false);
+	const { isLoad, setLoad } = useContextProvider();
 	function handleClick() {
-		setActived((prev) => !prev);
+		setLoad((prev) => !prev);
 	}
 	React.useEffect(() => {
-		if (!isActived) {
+		if (!isLoad) {
 			document.body.style.overflow = 'hidden';
 		}
 		return () => {
 			document.body.style.overflow = 'unset';
 		};
-	}, [isActived]);
-	return !isActived ? (
+	}, [isLoad]);
+	return !isLoad ? (
 		<div className='w-screen h-screen bg-[#D1CFCA] z-50 fixed top-0 flex flex-col pb-10 items-center'>
 			<div
 				style={{

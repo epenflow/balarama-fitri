@@ -1,8 +1,16 @@
 'use client';
 import React from 'react';
 import Countdown from './Countdown';
+import { useContextProvider } from './utils/Context';
 
 const Hero = () => {
+	const audioControls = React.useRef<HTMLAudioElement>(null);
+	const { isLoad } = useContextProvider();
+	React.useEffect(() => {
+		if (isLoad) {
+			audioControls.current?.play();
+		}
+	}, [isLoad]);
 	return (
 		<section className='h-screen w-screen flex items-center flex-col gap-2 text-[#D1CFCA] relative p-2'>
 			<div
@@ -19,6 +27,14 @@ const Hero = () => {
 				<span className='italic'>&</span>
 				<span>fitri</span>
 			</div>
+			<audio
+				controls
+				ref={audioControls}>
+				<source
+					src='/wedding.mp3'
+					type='audio/mpeg'
+				/>
+			</audio>
 			<p className='w-[380px] pt-10 pb-5 text-center'>
 				Suatu kehormatan bagi kami, apabila bapak/ibu/sodara/i, berkenan
 				hadir untuk memberikan doa restu kepada putra putri kami
