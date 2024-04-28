@@ -19,15 +19,15 @@ const Profil = () => {
 						Made wahyu balarama
 					</span>
 					<span className='text-lg'>
-						Putra kedua dari pasangan bapak I made wendra & ibu Ni
-						nyoman mariani
+						Putra kedua dari pasangan bapak I Made Wendra & Ibu Ni
+						Nyoman Mariani
 					</span>
 				</div>
 				<div className='flex flex-col'>
 					<span className='text-5xl capitalize'>Fitri Wulandari</span>
 					<span className='text-lg'>
-						Putri pertama dari pasangan Bapak nuril ahmad & ibu Alm.
-						Ni kadek sukariani
+						Putri pertama dari pasangan Bapak Nuril Ahmad & Ibu Alm.
+						Ni Kadek Sukariani
 					</span>
 				</div>
 			</div>
