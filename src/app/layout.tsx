@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import BG from '/public/BG.jpg';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Balarama dan Fitri',
-	icons: '/BG.jpg',
-	openGraph: {
-		images: '/BG.jpg',
+	icons: {
+		icon: {
+			type: 'image/jpg',
+			url: '/icon.jpg',
+		},
 	},
 };
 import local from 'next/font/local';
